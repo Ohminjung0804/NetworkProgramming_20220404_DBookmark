@@ -2,18 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<<<<<<< HEAD
-    <title>Title</title>
-</head>
-<body>
-    <a href="{% url 'bookmark:Add' %}">Add Bookmark</a>
-    <table>
-=======
     <title>Bookmark List</title>
 </head>
 <body>
+<a href="{% url 'bookmark:add' %}">Add Bookmark</a>
 <table>
->>>>>>> origin/master
     <thead>
     <tr>
         <th>#</th>
@@ -28,12 +21,13 @@
         <tr>
             <td>{{ forloop.counter }}</td>
             <td>{{ bookmark.name }}</td>
-            <td>{{ bookmark.url }}</td>
+            <td><a href="{{bookmark.url}}" target="_blank">{{ bookmark.url }}</a></td>
             <td>Edit</td>
             <td>Delete</td>
         </tr>
     {% endfor %}
     </tbody>
 </table>
+
 </body>
 </html>
