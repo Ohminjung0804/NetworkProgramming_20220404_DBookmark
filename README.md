@@ -23,5 +23,11 @@
    6. templates bookmark_list.html
    7. bookmark/views BookmarkCreateView
    8. bookmark/urls bookmark:add
-   9. templates bookmark_create.html
+   9. templates bookmark_create.
+   10. bookmark/views BookmarkDetailView
+   11. bookmark/urls bookmark:detail
+   12. templates bookmark_detail.html
+   13. bookmark/views BookmarkUpdateView
+   14. bookmark/urls bookmark:edit
+   15. templates bookmark_update.html
 
