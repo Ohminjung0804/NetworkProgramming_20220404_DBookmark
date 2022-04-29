@@ -35,4 +35,5 @@
    18. bookmark/urls bookmark:delete
    19. templates bookmark_confirm_delete.html
 4. ✨기능완성
+   1. templates/base.html, extends 'base.html', block title, content
 
