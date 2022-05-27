@@ -5,7 +5,7 @@ Bookmark Detail
 {% block content %}
 <h1>{{ bookmark.name }}</h1>
 <a href="{{ bookmark.url }}" target="_blank">{{ bookmark.url }}</a>
-<a href="{% url 'bookmark:list' %}">Go to Bookmark List</a>
+<a href="{% url 'bookmark:list' %}" class="btn btn-warning">Go to Bookmark List</a>
 </body>
 </html>
 {% endblock %}
