@@ -1,1 +1,1 @@
-web: gunicorn django DBookmark.wsgi --log-file -
+web: gunicorn DBookmark.wsgi --log-file -
