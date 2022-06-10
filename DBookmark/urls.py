@@ -24,6 +24,7 @@ urlpatterns =[
     path('', BookmarkListView.as_view()),
     path('bookmark/', include('bookmark.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('accounts.urls')),
 
 ]
 #
