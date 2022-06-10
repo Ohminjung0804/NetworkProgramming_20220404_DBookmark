@@ -56,4 +56,4 @@
   - accounts/admin ProfileAdmin
   - register
     - accounts/forms RegisterForm(UserCreationForm)
-
+    - accounts/views register
