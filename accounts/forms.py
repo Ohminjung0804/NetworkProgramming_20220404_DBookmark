@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from django.forms import models
 
 
-class Registerform(UserCreationForm):
+class RegisterForm(UserCreationForm):
     username = forms.CharField(label='사용자명', widget=forms.TextInput(attrs={
         'pattern':'[a-zA-20-9]+',
         'title': '영어 소문자 대문자, 숫자만 가능. 특수문자, 공백 입력 안됨',
