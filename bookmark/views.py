@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render
 
 # Create your views here.
@@ -8,7 +9,7 @@ from accounts.models import Profile
 from bookmark.models import Bookmark
 
 
-class BookmarkListView(ListView):
+class BookmarkListView(LoginRequiredMixin,ListView):
     model = Bookmark
     #bookmark_list.html, {'bookmark_list': Bookmark.objects.all()}
 
@@ -20,7 +21,7 @@ class BookmarkListView(ListView):
         else:
             bookmark_list = Bookmark.objects.none()
         return bookmark_list
-class BookmarkCreateView(CreateView):
+class BookmarkCreateView(LoginRequiredMixin, CreateView):
     model = Bookmark
     fields = ['prifuke','name', 'url']    #'__all__'
     template_name_suffix = '_create'    #bookmark_form.html -> bookmark_create.html
@@ -34,13 +35,13 @@ class BookmarkCreateView(CreateView):
 class BookmarkDetailView(DetailView):
     model = Bookmark
 
-class BookmarkUpdateView(UpdateView):
+class BookmarkUpdateView(LoginRequiredMixin,UpdateView):
     model = Bookmark
     fields = ['name','url']     #'__all__'
     template_name_suffix = '_update'      #bookmark_update.html
     # success_url = reverse_lazy('bookmark:list') # success_url없으면 model의 get_abolute_url() 호출
 
 
-class BookmarkDeleteView(DeleteView):
+class BookmarkDeleteView(LoginRequiredMixin,DeleteView):
     model = Bookmark
     success_url = reverse_lazy('bookmark:list')
