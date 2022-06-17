@@ -67,3 +67,5 @@
     - accounts/templates.accounts login, login_fail
       - bookmark/templates/bookmark login, logout
     - bookmark/views BookmarkListView get_queryset(),BookmarkCreateView get_initial()
+    - bookmark/templates/bookmark bookmark_create profile 숨기자
+    - accounts/templates/accounts add login link in register_done
