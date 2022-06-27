@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.template.context_processors import static
 from django.urls import path, include
 
+import bookmark
 from bookmark.views import BookmarkListView
 
 urlpatterns =[
     path('', BookmarkListView.as_view()),
+    path('', bookmark.views.list_bookmark, name='home'),
     path('bookmark/', include('bookmark.urls')),
     path('accounts/', include('accounts.urls')),
     path('admin/', admin.site.urls),

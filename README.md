@@ -77,4 +77,13 @@
     - 로그인 요구할 때, 이동할 URL setting
       - settings LOGIN_URL
     - 로그인 후 REDIRECT_FIELD_NAME으로 이동하자
-      - 
+  - FBV list+bookmark
+    - bookmark/views
+    - bookmark/urls
+    - DBookmark/urls
+  - FBV detail_bookmark
+    - bookmark/vies
+    - bookmark/urls
+  - FBV delete_bookmark
+    - bookmark/views
+    - bookmark/urls
