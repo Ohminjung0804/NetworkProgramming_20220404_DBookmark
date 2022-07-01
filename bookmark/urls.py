@@ -13,7 +13,8 @@ urlpatterns = [
     path('add2/', views.create_bookmark, name='add'),
     path('detail/<int:pk>/', BookmarkDetailView.as_view(), name='detail'), #bookmark:detail
     # path('detail/<int:pk>', views.detail_bookmark,)
-    path('edit/<int:pk>/', BookmarkUpdateView.as_view(), name='edit'),  #bookmark:edit
+    # path('edit/<int:pk>/', BookmarkUpdateView.as_view(), name='edit'),  #bookmark:edit
+    path('edit2/<int:pk>/', views.modify_bookmark, name='edit'),
     # path('delete/<int:pk>/', BookmarkDeleteView.as_view(), name='delete'), #bookmark:delete
     path('delete/<int:pk>/',views.delete_bookmark,name = 'delete'),
 ]
