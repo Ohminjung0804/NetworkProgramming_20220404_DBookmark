@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, redirect
 
@@ -75,7 +76,7 @@ def delete_bookmark(request, pk):
         bookmark = Bookmark.objects.get(pk=pk)
         return render(request, 'bookmark/bookmark_confirm_delete.html',{'bookmark':bookmark})
 
-
+@login_required
 def create_bookmark(request):
     if request.method == 'POST': #사용자가 입력하고 버튼 눌렀을 때
         form = BookmarkCreationForm(request.POST)#form 가져오자
